@@ -36,12 +36,12 @@ class ChambreCrudController extends AbstractCrudController
         ];
     }
     
-    public function createEntity(string $entityFqcn)
-    {
-        $pr = new $entityFqcn;
-        $pr->setDateEnregistrement(new \DateTime);
-        return $pr;
-    }
+    // public function createEntity(string $entityFqcn)
+    // {
+    //     $pr = new $entityFqcn;
+    //     $pr->setDateEnregistrement(new \DateTime);
+    //     return $pr;
+    // }
 }
 
 
