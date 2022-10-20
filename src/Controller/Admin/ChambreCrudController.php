@@ -25,13 +25,13 @@ class ChambreCrudController extends AbstractCrudController
         return [
             IdField::new('id')->hideOnForm(),
             TextField::new('titre'),
-            TextareaField::new('description_courte')->hideOnForm(),
-            TextEditorField::new('description_courte')->onlyOnForms(),
-            TextareaField::new('description_longue')->hideOnForm(),
-            TextEditorField::new('description_longue')->onlyOnForms(),
+            TextareaField::new('descriptionCourte')->hideOnForm(),
+            TextEditorField::new('descriptionCourte')->onlyOnForms(),
+            TextareaField::new('descriptionLongue')->hideOnForm(),
+            TextEditorField::new('descriptionLongue')->onlyOnForms(),
             TextField::new('photo'),
-            MoneyField::new('prix_journalier')->setCurrency('EUR'),
-            DateTimeField::new('date_enregistrement')->setFormat('d/M/Y à H:m:s')->hideOnForm(),
+            MoneyField::new('prixJournalier')->setCurrency('EUR'),
+            DateTimeField::new('dateEnregistrement')->setFormat('d/M/Y à H:m:s')->hideOnForm(),
             
         ];
     }
