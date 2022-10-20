@@ -14,12 +14,12 @@
 					<h3 class="card-header">{{ item.titre }}</h3>
 					<img src="{{ item.photo }}" alt="Image de la chambre">
 					<div class="card-body">
-						<p class="card-text">{{ item.description courte}}</p>
-						<p class="card-text">{{ item.description longue}}</p>
+						<p class="card-text">{{ item.descriptionCourte}}</p>
+						<p class="card-text">{{ item.descriptionLongue}}</p>
 						<p class="card-text text-end fw-bold">{{ item.prixJournalier }}€/j</p>
 					</div>
 					<div class="card-body text-end">
-						<a href="{{ path('commande_chambre', {id: item.id}) }}" class="card-link btn btn-primary">Réserver</a>
+						{# <a href="{{ path('commande_chambre', {id: item.id}) }}" class="card-link btn btn-primary">Réserver</a> #}
 					</div>
 				</div>
 			</div>

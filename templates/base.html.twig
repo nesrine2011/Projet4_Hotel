@@ -43,10 +43,10 @@
 
 						{% if app.user %}
 						
-							<a class="nav-link active" href="">Déconnexion</a>
+							<a class="nav-link active" href="{{ path('app_logout') }}">Déconnexion</a>
 						{% else %}
-							<a class="nav-link active" href="">Se connecter</a>
-							<a class="nav-link active" href="">S'inscrire</a>
+							<a class="nav-link active" href="{{ path('app_login') }}">Se connecter</a>
+							<a class="nav-link active" href="{{ path('app_register') }}">S'inscrire</a>
 						{% endif %}
 						{% if is_granted('ROLE_ADMIN') %}
 							<a class="nav-link active" href="{{ path('admin') }}">BACKOFFICE</a>

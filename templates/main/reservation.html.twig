@@ -6,29 +6,16 @@
 
 	<div class="col-md-6">
 		<div class="card mb-3" style="width: 18rem;">
-			<h3 class="card-header">{{ veh.titre }}</h3>
-			<img src="{{ veh.photo }}" alt="Image de la chambre">
+			<h3 class="card-header">{{ chambre.titre }}</h3>
+			<img src="{{chambre.photo }}" alt="Image de la chambre">
 			<div class="card-body">
-				<p class="card-text">{{ chambre.description }}</p>
-				<p class="card-text text-end fw-bold">{{ .prix_journalier }}€/j</p>
+				<p class="card-text">{{ chambre.descriptionLongue|raw }}</p>
+				<p class="card-text text-end fw-bold">{{ chambre.prixJournalier /100 }}€/j</p>
 			</div>
 		</div>
 	</div>
 
-	{% if app.user %}
-
-		{{ form_start(form) }}
-
-		{{ form_row(form.dateHeureDepart) }}
-		{{ form_row(form.dateHeureFin) }}
-
-		<button type="submit" class="btn btn-primary">Réserver à ces dates</button>
-
-		{{ form_end(form) }}
-	{% else %}
-		<a href="{{ path('app_login') }}">Veuillez vous connecter</a>
-		pour réserver votre chambre.
-	{% endif %}
+	
 
 
 {% endblock %}

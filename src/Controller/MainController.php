@@ -17,10 +17,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class MainController extends AbstractController
 {
     #[Route('/', name: 'app_main')]
-    public function index(): Response
+    public function index(ChambreRepository $repo): Response
     {
         return $this->render('main/index.html.twig', [
-            'controller_name' => 'MainController',
+            'chambre' => $repo->findAll()
         ]);
     }
    #[Route('/chambre', name:'chambre')]
@@ -36,13 +36,29 @@ class MainController extends AbstractController
     { 
          return $this->render('main/restaurant.html.twig'); 
     }
-  #[Route('/reservation',name:'reservation')]
-  public function reservation()
+  #[Route('/reservation/{id}',name:'reservation')]
+  public function reservation($id,ChambreRepository $repo,EntityManagerInterface $manager, Request $globals)
 
   {
-    return $this->render('main/reservation.html.twig');
+    $chambre=$repo->find($id);
+    
+
+    return $this->render('main/reservation.html.twig',[
+        'chambre'=>$chambre
+
+    ]);
 
   }
+  #[Route('/spa',name:'spa')]
+  public function spa()
+
+  {
+    return $this->render('main/spa.html.twig');
+
+  }
+
+
+
 }
 
 

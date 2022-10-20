@@ -29,10 +29,9 @@ class CommandeCrudController extends AbstractCrudController
     {
         return [
             IdField::new('id')->hideOnForm(),
-            // MoneyField::new('montant')->setCurrency('EUR')->hideOnForm(),
-            // // ChoiceField::new('etat')->setChoices(['en cours de traitement' => "en cours de traitement", 'envoyée' => "envoyée", 'livrée' => "livrée"]),
-            // DateTimeField::new('dateEnregistrement', "Date de paiement")->setFormat('d/M/Y à H:m:s')->hideOnForm(),
-            // AssociationField::new('chambre')->onlyOnForms(),
+            MoneyField::new('montant')->setCurrency('EUR')->hideOnForm(),
+            DateTimeField::new('dateEnregistrement', "Date de paiement")->setFormat('d/M/Y à H:m:s')->hideOnForm(),
+            AssociationField::new('chambre')->onlyOnForms(),
         ];
     }
     

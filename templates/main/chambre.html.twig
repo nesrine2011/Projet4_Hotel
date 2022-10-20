@@ -19,10 +19,13 @@
 						<p class="card-text text-end fw-bold">{{ item.prixJournalier /100 }}€/j</p>
 					</div>
 					<div class="card-body text-end">
+					<a href="{{path('reservation',{id:item.id})}}" class="btn btn-success">Reserver</a>
 						{# <a href="{{ path('commande_chambre', {id: item.id}) }}" class="card-link btn btn-primary">Réserver</a> #}
 					</div>
 				</div>
 			</div>
 		{% endfor %}
 	</div>
+
+
 {% endblock %}
