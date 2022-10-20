@@ -30,7 +30,7 @@ class DashboardController extends AbstractDashboardController
     public function index(): Response
     {
         // permet de rediriger vers les produits pour ne pas afficher la page d'accueil par défaut (voir doc easyadmin)
-        return $this->redirect($this->routeBuilder->setController(ChambreCrudController::class)->generateUrl());
+        return $this->redirect($this->routeBuilder->setController(MembreCrudController::class)->generateUrl());
         // return parent::index();
 
 

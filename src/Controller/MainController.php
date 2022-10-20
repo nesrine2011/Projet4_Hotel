@@ -36,8 +36,16 @@ class MainController extends AbstractController
     { 
          return $this->render('main/restaurant.html.twig'); 
     }
-  
+  #[Route('/reservation',name:'reservation')]
+  public function reservation()
+
+  {
+    return $this->render('main/reservation.html.twig');
+
+  }
 }
+
+
 
 
 
