@@ -41,7 +41,7 @@ class MainController extends AbstractController
 
   {
     $chambre=$repo->find($id);
-    
+
 
     return $this->render('main/reservation.html.twig',[
         'chambre'=>$chambre
@@ -56,6 +56,35 @@ class MainController extends AbstractController
     return $this->render('main/spa.html.twig');
 
   }
+
+#[Route('/about us',name:'about us')]
+    public function aboutus()
+    { 
+         return $this->render('main/aboutus.html.twig'); 
+    }
+
+    #[Route('/Avis',name:'Avis')]
+    public function Avis()
+    { 
+         return $this->render('main/Avis.html.twig'); 
+    }
+    #[Route('/contact',name:'contact')]
+    public function contact()
+    { 
+         return $this->render('main/contact.html.twig'); 
+    }
+    #[Route('/home',name:'home')]
+    public function home()
+    { 
+         return $this->render('main/home.html.twig'); 
+    }
+
+    #[Route('/activites',name:'activites')]
+    public function activites()
+    { 
+         return $this->render('main/activites.html.twig'); 
+    }
+
 
 
 
